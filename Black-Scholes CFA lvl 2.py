@@ -1,8 +1,3 @@
-# Input stock parameters
-#from math import exp
-#import sys
-#import pandas as pd
-#import numpy as np
 import random
 
 class BinaryTree():
@@ -161,19 +156,19 @@ def put():
         printTree(myTree)
 
     Tree_BI()
-
+#print("input exactly the choice (i.e. random call has to be RC")
 Choice = input("Random Call (RC), Random Put (RP), Manual Call (MC), Manual Put (MP):")
 
-if Choice == "RC":
+if Choice == "RC" or Choice == "rc" or Choice == "random call":
 
-    dt = 2  # input("Enter the timestep: ")
+    dt = 2  
     S = round(random.uniform(5,150),0)
     r = round(random.uniform(0.01,0.10),2)
-    # K = int(input("Enter the option strike price: "))
-    p = 0.5  # input("Enter the asset growth probability p: "))
+    
+    p = 0.5  
     u = round(random.uniform(0.10,0.50),2)
     d = round(random.uniform(0.10,0.50),2)
-    # N = input("Enter the number of timesteps until expiration: ")
+    
 
     print("dt=",dt)
     print("S= ", S)
@@ -184,29 +179,24 @@ if Choice == "RC":
 
     call()
 
-elif Choice == "MC":
+elif Choice == "MC" or Choice == "mc" or Choice == "manual call":
 
     dt = 2 #input("Enter the timestep: ")
     S = float(input("Enter the initial asset price: "))
     r = float(input("Enter the risk-free discount rate: "))
-    #K = int(input("Enter the option strike price: "))
-    p = 0.5 #input("Enter the asset growth probability p: "))
+    p = 0.5 
     u = float(input("Enter the asset growth factor u: "))
     d = float(input("Enter the asset growth factor d: "))
-    #N = input("Enter the number of timesteps until expiration: ")
-
     input("Press Enter to continue...")
     call()
 
-elif Choice == "RP":
+elif Choice == "RP" or Choice == "rp" or Choice == "random put":
     dt = 2  # input("Enter the timestep: ")
     S = round(random.uniform(5,150),0)
     r = round(random.uniform(0.01,0.10),2)
-    # K = int(input("Enter the option strike price: "))
-    p = 0.5  # input("Enter the asset growth probability p: "))
+    p = 0.5 
     u = round(random.uniform(0.10,0.50),2)
     d = round(random.uniform(0.10,0.50),2)
-    # N = input("Enter the number of timesteps until expiration: ")
 
     print("dt=",dt)
     print("S= ", S)
@@ -217,17 +207,14 @@ elif Choice == "RP":
 
     put()
 
-elif Choice == "MP":
+elif Choice == "MP" or Choice == "mp" or Choice == "manual put":
 
-    dt = 2 #input("Enter the timestep: ")
+    dt = 2 
     S = float(input("Enter the initial asset price: "))
     r = float(input("Enter the risk-free discount rate: "))
-    #K = int(input("Enter the option strike price: "))
-    p = 0.5 #input("Enter the asset growth probability p: "))
+    p = 0.5 
     u = float(input("Enter the asset growth factor u: "))
     d = float(input("Enter the asset growth factor d: "))
-    #N = input("Enter the number of timesteps until expiration: ")
-
     input("Press Enter to continue...")
 
     put()
